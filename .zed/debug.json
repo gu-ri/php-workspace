@@ -1,0 +1,15 @@
+// Project-local debug tasks
+//
+// For more documentation on how to configure debug tasks,
+// see: https://zed.dev/docs/debugger
+[
+  {
+    "label": "XDebug",
+    "adapter": "Xdebug",
+    "request": "launch",
+    "port": 9000,
+    "pathMappings": {
+      "/var/www/html": "$ZED_WORKTREE_ROOT/php"
+    }
+  }
+]
