@@ -22,7 +22,7 @@ function get_all_combination_sums(array $array): array
     return $sums;
 }
 
-function culc_combination(int $n, int $r): int
+function calc_combination(int $n, int $r): int
 {
     if ($n <= 0 || $r <= 0 || $n < $r) return 0;
 
