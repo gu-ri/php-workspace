@@ -4,7 +4,7 @@ services:
     build: ./
     volumes:
       - ./php.ini:/usr/local/etc/php/php.ini
-      - ./php:/var/www/html
+      - ./src:/var/www/html
     ports:
       - 8080:80
-    container_name: atcoder-web-1
+    container_name: php-workspace
