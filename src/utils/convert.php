@@ -1,8 +1,19 @@
 <?php
 
-function array_compression(array $array, int $start = 1): array {
-    $a = array_unique($array);
+/**
+ * 座標圧縮
+ *
+ * @param int[] $nums
+ * @param int $start
+ * @return int[]
+ */
+function array_compression(array $nums, int $start = 0): array
+{
+    if (empty($nums)) {
+        return [];
+    }
+    $a = array_unique($nums);
     sort($a);
     $a = array_flip($a);
-    return array_map(fn($x) => ($a[$x] + $start), $array);
+    return array_map(fn ($x) => ($a[$x] + $start), $nums);
 }
