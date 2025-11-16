@@ -4,8 +4,9 @@
     "adapter": "Xdebug",
     "request": "launch",
     "port": 9000,
+    "program": "$ZED_WORKTREE_ROOT/src/main.php",
     "pathMappings": {
-      "/var/www/html": "$ZED_WORKTREE_ROOT/php"
+      "/var/www/html": "$ZED_WORKTREE_ROOT/src"
     }
   }
 ]
