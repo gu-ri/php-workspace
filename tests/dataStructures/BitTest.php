@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once('src/utils/Bit.php');
+require_once('src/utils/dataStructures/Bit.php');
 
 final class BitTest extends TestCase
 {

@@ -22,15 +22,15 @@ class Bit
     /**
      * i番目にxを加算
      *
-     * @param int $i 1-based index
+     * @param int $pos 1-based index
      * @param int $x 加算する値
      * @return self
      */
-    public function add(int $i, int $x = 1): self
+    public function add(int $pos, int $x = 1): self
     {
-        while ($i <= $this->size) {
-            $this->tree[$i] += $x;
-            $i += $i & -$i;
+        while ($pos <= $this->size) {
+            $this->tree[$pos] += $x;
+            $pos += $pos & -$pos;
         }
 
         return $this;
@@ -39,15 +39,15 @@ class Bit
     /**
      * 1番目からi番目までの和を取得
      *
-     * @param int $i 1-based index
+     * @param int $pos 1-based index
      * @return int
      */
-    public function sum(int $i): int
+    public function sum(int $pos): int
     {
         $sum = 0;
-        while ($i > 0) {
-            $sum += $this->tree[$i];
-            $i -= $i & -$i;
+        while ($pos > 0) {
+            $sum += $this->tree[$pos];
+            $pos -= $pos & -$pos;
         }
         return $sum;
     }
